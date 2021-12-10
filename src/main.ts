@@ -18,7 +18,7 @@ async function bootstrap() {
   const whitelist = ['http://localhost:4000'];
   app.enableCors({
     origin: function (origin, callback) {
-      if (whitelist.indexOf(origin) !== -1) {
+      if (true) {
         console.log('allowed cors for:', origin);
         callback(null, true);
       } else {
