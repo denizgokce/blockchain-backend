@@ -41,7 +41,7 @@ export class BlockchainService {
         .subscribe(
           (response: AxiosResponse<any>) => {
             if (response.status === 200) {
-              response.data.tx = [];
+              // response.data.tx = [];
               subscriber.next(response.data);
             } else {
               subscriber.error(response.statusText);

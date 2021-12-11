@@ -61,8 +61,8 @@ export class BlockchainController {
 
   @Get('block')
   public async getBlockDetail(
-    @Query('hash') hash: string,
     @Res() response: Response,
+    @Query('hash') hash: string,
   ) {
     const cacheKey = md5(`block-${hash}`);
     const cachedValue = await this.cacheManager.get(cacheKey);
